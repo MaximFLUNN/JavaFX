@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labwork.Controller">
+   <children>
+      <Pane fx:id="mainPane" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <Circle fx:id="firstCircle" centerX="600.0" centerY="250.0" fill="DODGERBLUE" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircle" centerX="750.0" centerY="250.0" fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane layoutY="400.0" prefHeight="100.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="900.0">
+               <children>
+                  <Button fx:id="buttonStart" mnemonicParsing="false" text="Start">
+                     <HBox.margin>
+                        <Insets bottom="38.0" left="50.0" right="50.0" top="38.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonPause" mnemonicParsing="false" text="Pause">
+                     <HBox.margin>
+                        <Insets bottom="38.0" left="50.0" right="50.0" top="38.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonShot" mnemonicParsing="false" text="Shot">
+                     <HBox.margin>
+                        <Insets bottom="38.0" left="50.0" right="50.0" top="38.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="500.0" prefWidth="100.0">
+         <children>
+            <Polygon fx:id="playerPolygon" fill="DODGERBLUE" layoutX="50.0" layoutY="260.0" rotate="90.0" scaleX="0.5" scaleY="0.5" scaleZ="0.5" stroke="BLACK" strokeType="INSIDE">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+            </Polygon>
+         </children>
+      </Pane>
+      <Pane layoutX="800.0" prefHeight="500.0" prefWidth="100.0">
+         <children>
+            <Label layoutX="13.0" layoutY="50.0" text="Счёт игрока:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="150.0" text="Выстрелов:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelScore" layoutX="15.0" layoutY="75.0" text=" " />
+            <Label fx:id="labelShots" layoutX="15.0" layoutY="175.0" text=" " />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
